@@ -1,0 +1,13 @@
+{
+  "name": "platformatic-kafka-snappy-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf artifacts java/target",
+    "build:java": "cd java && mvn -q package",
+    "repro": "npm run build:java && node repro.mjs"
+  },
+  "dependencies": {
+    "@platformatic/wasm-utils": "0.2.1"
+  }
+}
